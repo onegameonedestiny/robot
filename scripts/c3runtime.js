@@ -1445,24 +1445,25 @@ self.C3_ExpressionFuncs = [
 		() => "0122662821",
 		() => "0122566413",
 		() => "0122559395",
-		() => "0122567083",
-		() => "0122646574",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() % 6);
+			return () => (v0.GetValue() % 4);
 		},
+		() => "0122567083",
+		() => "0122646574",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() % 2);
+		},
+		() => "1459226691",
 		() => 0.8,
 		() => 100,
 		() => "你因為撞到怪物，請感應卡牌重新開始",
-		() => "成功營救，請掃描本圖片通關",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() % 4);
-		}
+		() => "成功營救，請回去輸入【REPEAT】"
 ];
 
 
