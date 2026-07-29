@@ -8,6 +8,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.Keyboard,
 		C3.Plugins.Audio,
+		C3.Plugins.Arr,
+		C3.Plugins.Button,
+		C3.Plugins.TextBox,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Text.Acts.SetText,
@@ -33,6 +36,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Cnds.IsVisible,
 		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Arr.Exps.At,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Acts.SetFunctionReturnValue,
 		C3.Plugins.Sprite.Acts.SetPos,
@@ -45,7 +49,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Text.Acts.TypewriterText,
-		C3.Plugins.Audio.Acts.Stop
+		C3.Plugins.Audio.Acts.Stop,
+		C3.Plugins.TextBox.Acts.SetFocus,
+		C3.Plugins.System.Cnds.For,
+		C3.Plugins.Arr.Acts.SetX,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.Button.Cnds.CompareInstanceVar,
+		C3.Plugins.TextBox.Exps.Text,
+		C3.Plugins.TextBox.Acts.SetText
 	];
 };
 self.C3_JsPropNameTable = [
@@ -70,6 +82,11 @@ self.C3_JsPropNameTable = [
 	{顯示前動: 0},
 	{展示機器人: 0},
 	{音訊: 0},
+	{卡號: 0},
+	{按鈕: 0},
+	{輸入框: 0},
+	{編號: 0},
+	{選卡: 0},
 	{移動次數: 0},
 	{冷爆次數: 0},
 	{前一動: 0},
@@ -98,5 +115,9 @@ self.InstanceType = {
 	鍵盤: class extends self.IInstance {},
 	顯示前動: class extends self.ITextInstance {},
 	展示機器人: class extends self.ISpriteInstance {},
-	音訊: class extends self.IInstance {}
+	音訊: class extends self.IInstance {},
+	卡號: class extends self.IArrayInstance {},
+	按鈕: class extends self.IButtonInstance {},
+	輸入框: class extends self.ITextInputInstance {},
+	選卡: class extends self.IButtonInstance {}
 }
