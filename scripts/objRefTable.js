@@ -11,6 +11,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Arr,
 		C3.Plugins.Button,
 		C3.Plugins.TextBox,
+		C3.Plugins.Browser,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.Text.Acts.SetText,
@@ -57,7 +58,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.Button.Cnds.CompareInstanceVar,
 		C3.Plugins.TextBox.Exps.Text,
-		C3.Plugins.TextBox.Acts.SetText
+		C3.Plugins.TextBox.Acts.SetText,
+		C3.Plugins.Browser.Acts.RequestFullScreen
 	];
 };
 self.C3_JsPropNameTable = [
@@ -87,6 +89,8 @@ self.C3_JsPropNameTable = [
 	{輸入框: 0},
 	{編號: 0},
 	{選卡: 0},
+	{按鈕2: 0},
+	{瀏覽器: 0},
 	{移動次數: 0},
 	{冷爆次數: 0},
 	{前一動: 0},
@@ -119,5 +123,7 @@ self.InstanceType = {
 	卡號: class extends self.IArrayInstance {},
 	按鈕: class extends self.IButtonInstance {},
 	輸入框: class extends self.ITextInputInstance {},
-	選卡: class extends self.IButtonInstance {}
+	選卡: class extends self.IButtonInstance {},
+	按鈕2: class extends self.IButtonInstance {},
+	瀏覽器: class extends self.IInstance {}
 }
